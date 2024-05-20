@@ -7,7 +7,7 @@ const Header = () => {
         <h3 className="text-slate-50">Trello Clone</h3>
       </div>
       <div className="right flex items-center space-x-4">
-        <span>Remote dev</span>
+        <span className="text-white font-semibold">Techloset Solutions</span>
         <img
           className="rounded-full"
           src="https://placehold.co/28x28/png"

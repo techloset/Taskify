@@ -1,9 +1,9 @@
+"use client";
 import { useState } from "react";
-import "./App.css";
-import Header from "./components/header/Header";
-import { BoardContext } from "./contexts/BoardContext";
-import { Sidebar } from "react-feather";
-import { Main } from "next/document";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
+import { BoardContext } from "../context/BoardContext";
 
 function App() {
   const boardData = {

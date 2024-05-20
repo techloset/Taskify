@@ -53,7 +53,7 @@ const AddList = (props: any) => {
         {!show && (
           <button
             onClick={() => setShow(!show)}
-            className="flex p-1 w-full justify-center rounded items-center mt-1 hover:bg-gray-500 h-8"
+            className="flex p-1 w-full justify-center rounded items-center mt-1 hover:bg-gray-500 h-8 text-slate-400"
           >
             <Plus size={16}></Plus> Add a list
           </button>

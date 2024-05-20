@@ -1,4 +1,4 @@
-import { BoardContext } from "@/app/contexts/BoardContext";
+import { BoardContext } from "@/context/BoardContext";
 import React, { useContext, useState } from "react";
 import { ChevronRight, ChevronLeft, Plus, X } from "react-feather";
 import { Popover } from "react-tiny-popover";
@@ -27,7 +27,7 @@ const Sidebar = () => {
   };
   return (
     <div
-      className={`bg-[#121417] h-[calc(100vh-3rem)] border-r border-r-[#9fadbc29] transition-all linear duration-500 flex-shrink-0 ${
+      className={`bg-[#003049] h-[calc(100vh-3rem)] border-r border-r-[#9fadbc29] transition-all linear duration-500 flex-shrink-0 ${
         collapsed ? "w-[42px]" : "w-[280px]"
       }`}
     >
@@ -44,7 +44,7 @@ const Sidebar = () => {
       {!collapsed && (
         <div>
           <div className="workspace p-3 flex justify-between border-b border-b-[#9fadbc29]">
-            <h4>Remote Dev's Workspace</h4>
+            <h4 className="text-white">Techloset Taskify</h4>
             <button
               onClick={() => setCollapsed(!collapsed)}
               className="hover:bg-slate-600 rounded-sm p-1"
@@ -54,12 +54,12 @@ const Sidebar = () => {
           </div>
           <div className="boardlist">
             <div className="flex justify-between px-3 py-2">
-              <h6>Your Boards</h6>
+              <h4 className="text-white">Your Boards</h4>
 
               <Popover
                 isOpen={showpop}
                 align="start"
-                positions={["right", "top", "bottom", "left"]} // preferred positions by priority
+                positions={["right", "top", "bottom", "left"]}
                 content={
                   <div className="ml-2 p-2 w-60 flex flex-col justify-center items-center bg-slate-600 text-white rounded">
                     <button
@@ -128,7 +128,7 @@ const Sidebar = () => {
                       >
                         &nbsp;
                       </span>
-                      <span>{x.name}</span>
+                      <span className="text-white">{x.name}</span>
                     </button>
                   </li>
                 );
